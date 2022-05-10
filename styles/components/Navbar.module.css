@@ -1,0 +1,116 @@
+.Navbar {
+  position: fixed;
+  display: flex;
+  width: 90%;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 35px;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+.NavLinks {
+  padding: 10px;
+  display: flex;
+  margin-right: 30px;
+}
+.NavIcon {
+  transition: .5s;
+}
+.NavIcon h2 {
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 32px;
+  margin-left: 30px;
+  transition: .5s;
+}
+.NavIcon:hover {
+  transform: rotate(5deg);
+}
+.NavIcon h2:hover {
+  transform: scale(1.1);
+}
+.NavLinks p {
+  padding: 0 5px;
+  font-size: 26px;
+}
+
+
+/* MOBILE NAVBAR DESIGN */
+.Hamburguer {
+  position: fixed;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.794);
+  top: 20px; 
+  right: 20px;
+  border-radius: 50%;
+  font-size: 40px;
+  z-index: 100;
+}
+.MenuNavMobile {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  /* border-radius: 0 0 0 50px; */
+  backdrop-filter: blur(5px);
+  transition: .5s;
+  transform: translateX(760px);
+  z-index: 99;
+}
+.MenuActive {
+  transform: translateX(0);
+}
+.ItemLink {
+  position: relative;
+  font-weight: bold;
+  transition: .5s;
+}
+.ItemLink::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #46fc46;
+  box-shadow: 0 0 5px #46fc46,
+              0 0 15px #46fc46,
+              0 0 30px #46fc46,
+              0 0 60px #46fc46;
+  transform: translateY(10px);
+  transition: .5s;
+  opacity: 0;
+}
+.ItemLink:hover {
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  color: #46fc46;
+}
+.ItemLink:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+@media (min-width: 768px) {
+  .ItemLink {
+    margin-left: 7px;
+    font-weight: normal;
+  }
+}

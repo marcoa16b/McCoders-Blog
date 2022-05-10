@@ -1,0 +1,247 @@
+/* .card{
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	width: 300px;
+	height: 400px;
+	margin: 20px;
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 #0001, 0 6px 20px 0 #0001; 
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+
+.card:hover{
+	width: 320px;
+	height: 420px;
+	margin: 10px;
+}
+
+.card:hover .info {
+	padding: 20px 30px;
+}
+
+.card img{
+	width: 100%;
+	flex: 1;
+}
+
+.card .info{
+	width: 100%;
+	height: 230px;
+	padding: 20px;
+	transition: all 0.3s;
+}
+
+.card .info h1,
+.card .info p {
+    color: #555;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.card .info h1{
+	margin: 0;
+	font-size: 1.3em;
+  	-webkit-line-clamp: 2;
+}
+
+.card .info p {
+	padding-bottom: 20px;
+} */
+
+
+/* NEW CARD STYLE */
+
+/* .Container {
+	margin-top: 150px;
+}
+.Container h2 {
+	letter-spacing: 1px;
+	font-size: 50px;
+
+} */
+
+.blog_post {
+	width: 100%;
+	max-width: 98rem;;
+	padding: 5rem;
+	background-color: #dbf4ff21;
+	box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.4);
+	display: flex;
+	align-items: center;
+	border-radius: .8rem;
+	margin: 10px;
+}
+.blog_post_img {
+	min-width: 35rem;
+	max-width: 35rem;
+	height: 25rem;
+	transform: translateX(-8rem);
+	position: relative;
+}
+.blog_post_img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.blog_post_img img::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, 0.8);
+}
+.BlogPost_Date {
+	display: block;
+	color: rgb(255, 255, 255);
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin: .5rem 0;
+}
+.BlogPost_Date span {
+	margin: .4rem .7rem;
+}
+.BlogPost_Title {
+	font-size: 2.5rem;
+	margin: 1.5rem 0 2rem;
+	text-transform: uppercase;
+	color: #4facfe;
+}
+.BlogPost_Text {
+	margin-bottom: 3rem;
+	font-size: 1.4rem;
+	color: #ffffffb3;
+}
+
+
+
+/* BUTTON CODE */
+.Button {
+  position: relative;
+  width: 155px;
+  height: 50px;
+  margin: 20px auto;
+}
+.Button a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: #fff;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+.Button:hover a {
+  letter-spacing: 3px;
+}
+.Button a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+.Button:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
+.Button::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #0f0;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+.Button:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+.Button::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #0f0;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+.Button:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+.Button::before,
+.Button::after {
+  background: #0f0;
+  box-shadow: 0 0 5px #0f0,
+              0 0 15px #0f0,
+              0 0 30px #0f0,
+              0 0 60px #0f0;
+}
+
+
+@media screen and (max-width: 1068px) {
+	.blog_post {
+		max-width: 80rem;
+	}
+	.blog_post_img {
+		max-width: 30rem;
+		min-width: 30rem;
+	}
+}
+
+@media screen and (max-width: 868px) {
+	.blog_post {
+		max-width: 70rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.blog_post {
+		padding: 2.5rem;
+		flex-direction: column;
+		margin: 10px 0;
+	}
+	.blog_post_img {
+		max-width: 100%;
+		min-width: 100%;
+		transform: translate(0, .1rem);
+	}
+}

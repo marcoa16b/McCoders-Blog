@@ -1,5 +1,4 @@
-.container {
-  padding: 0;
+.PageContainer {
   background-color: #202733;
 }
 .HeaderContainer {
@@ -27,6 +26,7 @@
   font-size: 28px;
   color: #fff;
   max-width: 60%;
+  text-align: center;
 }
 .Button {
   position: relative;
@@ -122,59 +122,10 @@
               0 0 60px #0f0;
 }
 
-.Main {
+.CategoriesContainer {
+  padding: 50px;
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.Main .TitleMain {
-  color: white;
-  font-size: 30px;
-}
-.PostsContainer{
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  min-height: 100vh;
-  width: 100%;
-  padding: 20px;
-}
-.decorator {
-  width: 150px;
-  height: 7px;
-  background: #4facfe;
-  box-shadow: 0 0 5px #4facfe,
-              0 0 15px #4facfe,
-              0 0 30px #4facfe,
-              0 0 60px #4facfe;
-  margin: 10px 0 10px 0;
-}
-
-
-/* FOOTER */
-.FooterHome {
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-.FooterHome h1 {
-  font-size: 30px;
-}
-.FooterHome p {
-  padding: 0 20px;
-  max-width: 600px;
-  font-size: 16px;
-}
-.FooterHome h2 {
-  font-size: 22px;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+  justify-content: space-evenly;
 }

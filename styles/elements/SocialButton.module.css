@@ -1,0 +1,155 @@
+/* ####################################### */
+/* ############### Default ############### */
+/* ####################################### */
+.ListDefault {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .5s;
+}
+.ListDefault:hover {
+  z-index: 10000;
+  transform: scale(0.75);
+}
+.ListDefault::before {
+  content: '';
+  position: absolute;
+  inset: 30px;
+  box-shadow: 0 0 0 10px #0f0,
+              0 0 0 20px #202733,
+              0 0 0 22px #0f0;
+  transition: .5s;
+}
+.ListDefault:hover::before {
+  inset: 0;
+}
+.ListDefault::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #202733;
+  transform: rotate(45deg);
+}
+.ListDefault a {
+  position: relative;
+  text-decoration: none;
+  color: #0f0;
+  z-index: 10;
+  font-size: 20px;
+  transition: .5s;
+}
+.ListDefault:hover a {
+  font-size: 35px;
+  filter: drop-shadow(0 0 20px #0f0)
+          drop-shadow(0 0 40px #0f0)
+          drop-shadow(0 0 60px #0f0);
+}
+
+/* ####################################### */
+/* ################ BLUE ################# */
+/* ####################################### */
+.ListBlue {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .5s;
+}
+.ListBlue:hover {
+  z-index: 10000;
+  transform: scale(0.75);
+}
+.ListBlue::before {
+  content: '';
+  position: absolute;
+  inset: 30px;
+  box-shadow: 0 0 0 10px #1994ff,
+              0 0 0 20px #202733,
+              0 0 0 22px #1994ff;
+  transition: .5s;
+}
+.ListBlue:hover::before {
+  inset: 0;
+}
+.ListBlue::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #202733;
+  transform: rotate(45deg);
+}
+.ListBlue a {
+  position: relative;
+  text-decoration: none;
+  color: #1994ff;
+  z-index: 10;
+  font-size: 20px;
+  transition: .5s;
+}
+.ListBlue:hover a {
+  font-size: 35px;
+  filter: drop-shadow(0 0 20px #1994ff)
+          drop-shadow(0 0 40px #1994ff)
+          drop-shadow(0 0 60px #1994ff);
+}
+
+/* ####################################### */
+/* ################# RED ################# */
+/* ####################################### */
+.ListRed {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .5s;
+}
+.ListRed:hover {
+  z-index: 10000;
+  transform: scale(0.75);
+}
+.ListRed::before {
+  content: '';
+  position: absolute;
+  inset: 30px;
+  box-shadow: 0 0 0 10px #f00,
+              0 0 0 20px #202733,
+              0 0 0 22px #f00;
+  transition: .5s;
+}
+.ListRed:hover::before {
+  inset: 0;
+}
+.ListRed::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #202733;
+  transform: rotate(45deg);
+}
+.ListRed a {
+  position: relative;
+  text-decoration: none;
+  color: #f00;
+  z-index: 10;
+  font-size: 20px;
+  transition: .5s;
+}
+.ListRed:hover a {
+  font-size: 35px;
+  filter: drop-shadow(0 0 20px #f00)
+          drop-shadow(0 0 40px #f00)
+          drop-shadow(0 0 60px #f00);
+}
