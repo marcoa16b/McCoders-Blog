@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import fs from 'fs';
+import matter from 'gray-matter';
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
 import Markdown from '@components/Markdown';
-import fs from 'fs';
-import matter from 'gray-matter';
 
 import styles from '@styles/article.module.css';
 
@@ -36,10 +36,10 @@ const Article = ({ article }) => {
         <Image 
           alt='header image'
           src={article.meta.thumbnail}
-          width={800}
-          height={600}
+          // width={800}
+          // height={600}
           layout='fill'
-          priority={false}
+          priority={true}
         />
 
         <div className={styles.title}>

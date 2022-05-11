@@ -1,17 +1,43 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import Head from 'next/head'
 import fs from 'fs'
+import matter from 'gray-matter'
 import Navbar from '@components/Navbar'
 import Card from '@components/Card'
 import Footer from '@components/Footer'
 import styles from '@styles/Home.module.css'
-import matter from 'gray-matter'
 
 export default function Home({ articles }) {
+  /*
+   * index.js => "/" => Home route
+   * 
+   * Se crean 2 estados "loading" y "articleLimits" 
+   * loading se encarga de evitar que la pagina cargue completamente antes de obtener 
+   * los articulos. 
+   * articleLimits se encarga de almacenar los 10 articulos mas recientes.
+   * */
   const [loading, setLoading] = React.useState(true); 
   const [articleLimits, setArticleLimits] = React.useState(Array);
 
-  function limiterArticles() {
+  /* limiterArticles => se encarga de obtener los ultimos 10 articulos para 
+   * almacenarlos en articleLimits y no mostrar mas de 10 articulos
+  */
+  // function limiterArticles() {
+  //   if(articles.length < 10){
+  //     setArticleLimits(articles);
+  //   } else {
+  //     const arr = [];
+  //     for(let i in articles){
+  //       if(parseInt(i) < 10) {
+  //         arr.push(articles[i])
+  //       }
+  //     }
+  //     setArticleLimits(arr);
+  //   }
+  //   setLoading(false);
+  // }
+
+  const getLimitedArticles = useCallback(()=>{
     if(articles.length < 10){
       setArticleLimits(articles);
     } else {
@@ -24,11 +50,11 @@ export default function Home({ articles }) {
       setArticleLimits(arr);
     }
     setLoading(false);
-  }
+  }, [articles])
 
   React.useEffect(() => {
-    limiterArticles();
-  }, [])
+    getLimitedArticles();
+  }, [getLimitedArticles])
 
   return (
     loading 

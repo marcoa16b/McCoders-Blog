@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Image from "next/image";
 import ButtonNeon from "../elements/ButtonNeon";
 import styles from "../styles/components/card.module.css";
 
@@ -8,7 +8,8 @@ const Card = ({ article }) => {
     <div className={styles.Container}>
       <div className={styles.blog_post}>
         <div className={styles.blog_post_img}>
-          <img alt="image of the card" src={article.thumbnail} />
+          <Image alt="image of the card" src={article.thumbnail} layout='fill' />
+          {/* <img alt="image of the card" src={article.thumbnail} /> */}
         </div>
         <div className={styles.blog_post_info}>
           <div className={styles.BlogPost_Date}>

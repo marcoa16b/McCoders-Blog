@@ -19,7 +19,7 @@ sit at blandit cras id eu congue et platea massa lectus netus vulputate suspendi
 ### Third subtitle
 #### Fourth subtitle
 
-ipsum tincidunt lorem habitant dis nulla consectetur tincidunt iaculis adipiscing erat enim, ultrices etiam mollis volutpat est vestibulum aliquam lorem elit natoque metus dui est elit. mollis sit tincidunt mauris porttitor pellentesque at nisl pulvinar tortor egestas habitant hac, metus blandit scelerisque in aliquet tellus enim viverra sed eu neque placerat lobortis a.
+ipsum tincidunt lorem habitant dis nulla consectetur tincidunt iaculis adipiscing erat enim, ultrices etiam mollis volutpat est vestibulum $L = \frac{1}{2} \rho v^2 S C_L$ aliquam lorem elit natoque metus dui est elit. mollis sit tincidunt mauris porttitor pellentesque at nisl pulvinar tortor egestas habitant hac, metus blandit scelerisque in aliquet tellus enim viverra sed eu neque placerat lobortis a.
 
 ```ts
 function someFunc(thing: string){
@@ -27,3 +27,40 @@ function someFunc(thing: string){
     return thing2;
 }
 ```
+
+# Example of Maths
+
+$$
+L = \frac{1}{2} \rho v^2 S C_L
+$$
+
+## this is another title
+este texto tiene una formula $\frac{1}{2}$ matematica
+
+---
+
+# GFM
+
+## Autolink literals
+
+www.example.com, https://example.com, and contact@example.com.
+
+## Footnote
+
+A note[^1]
+
+[^1]: Big note.
+
+## Strikethrough
+
+~one~ or ~~two~~ tildes.
+
+## Table
+
+| a | b  |  c |  d  |
+| - | :- | -: | :-: |
+
+## Tasklist
+
+* [ ] to do
+* [x] done

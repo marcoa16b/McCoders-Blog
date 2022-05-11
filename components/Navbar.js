@@ -58,9 +58,9 @@ const Navbar = () => {
         <Link href='/categories'>
           <p className={styles.ItemLink}>Categories</p>
         </Link>
-        <Link href='/info'>
+        {/* <Link href='/info'>
           <p className={styles.ItemLink}>Information</p>
-        </Link>
+        </Link> */}
       </div>
     </div>
     :
@@ -75,9 +75,9 @@ const Navbar = () => {
         <Link href='/categories'>
           <p className={styles.ItemLink}>Categories</p>
         </Link>
-        <Link href='/info'>
+        {/* <Link href='/info'>
           <p className={styles.ItemLink}>Information</p>
-        </Link>
+        </Link> */}
       </nav>
     </div>
   );

@@ -1,3 +1,4 @@
+
 .markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
@@ -655,8 +656,9 @@
   height: .25em;
   padding: 0;
   margin: 24px 0;
-  background-color: #e1e4e8;
+  background-color: #a9a9a9;
   border: 0;
+  border-radius: 5px;
 }
 
 .markdown-body blockquote {

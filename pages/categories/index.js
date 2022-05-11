@@ -27,7 +27,6 @@ const Categories = () => {
         <div className={styles.HeaderText}>
           <h1>Categorias del blog</h1>
           <p className={styles.HedTxt}>Selecciona la categoria que quieres ver y se desplagara la lista completa de entradas relacionadas a esa categoria.</p>
-          {/* <p className={styles.Button}>Button</p> */}
           <div className={styles.Button}>
             <Link href="#">
               <a>Button</a>
@@ -39,7 +38,6 @@ const Categories = () => {
         <div className={styles.CategoriesContainer}>
           {
             myArray.map((cat, i) => (
-              // <h1 key={i}>{cat}</h1>
               <CategoryCard category={cat} key={i} />
             ))
           }
