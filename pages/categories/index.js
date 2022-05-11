@@ -12,7 +12,8 @@ const Categories = () => {
   const [myArray, setMyArray] = React.useState(Array);
 
   React.useEffect(() => {
-    setMyArray(CategoriesList)
+    const array = CategoriesList();
+    setMyArray(array)
   }, [])
   
   return (

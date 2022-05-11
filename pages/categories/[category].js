@@ -88,9 +88,12 @@ const CategoryPost = ({ articles }) => {
       <main>
         <div className={styles.PostsContainer}>
           {
+            listArticles ? 
             listArticles.map((article, i) => (
                 <Card key={i} article={article} />
             ))
+            :
+              <h1>Not articles</h1>
           }
         </div>
       </main>
@@ -100,10 +103,16 @@ const CategoryPost = ({ articles }) => {
 };
 
 export const getStaticPaths = async () => {
+  const list = CategoriesList();
+  const paths = list.map(item => ({
+    params: {
+      category: item
+    }
+  }));
 
   return {
-      paths: [], //indicates that no page needs be created at build time
-      fallback: 'blocking' //indicates the type of fallback
+      paths, 
+      fallback: false //indicates the type of fallback
   }
 }
 
