@@ -35,7 +35,7 @@ export default function Document() {
                   page_path: window.location.pathname,
               });
             `,
-                }} 
+          }} 
         />
       </Head>
       <body>

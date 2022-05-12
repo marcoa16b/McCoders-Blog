@@ -44,6 +44,7 @@
 
 .content {
 	z-index: 1;
+	position: relative;
 	margin: -100px 0 40px;
 	padding: 50px;
 	border-radius: 10px;
@@ -51,6 +52,27 @@
 	background-color: rgb(227, 227, 227);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.396), 0 6px 20px 0 rgba(0, 0, 0, 0.396); 
 }
+
+/* .SocialShareButtons {
+	position: absolute;
+	top: 150px;
+	right: -50px;
+}
+.SocialShareButtons .shareButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	margin-bottom: 10px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+}
+.SocialShareButtons .shareButton .shareIcon {
+	width: 20px;
+	height: 20px;
+} */
 
 @media screen and (max-width: 1068px) {
 	.content {

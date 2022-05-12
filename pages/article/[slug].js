@@ -1,17 +1,20 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
 import Markdown from '@components/Markdown';
-
+import ShareButtons from '@components/ShareButtons';
+import { FaFacebookF, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import styles from '@styles/article.module.css';
 
 const Article = ({ article }) => {
 
   const [loading, setLoading] = React.useState(true);
+  // const [scroll, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     setLoading(false);
@@ -49,6 +52,7 @@ const Article = ({ article }) => {
 
       <main className={styles.content}>
         <Markdown content={article.content} />
+        <ShareButtons article={article} />
       </main>
 
       <Footer />

@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import '../styles/markdown.css'
+import '../styles/cookies.css'
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import CookieConsent from "react-cookie-consent";
@@ -23,14 +24,16 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <CookieConsent
         location="bottom"
-        buttonText="Sí, utilizar cookies."
+        buttonText="Aceptar cookies."
         onAccept={() => location.reload()}
         cookieName="CookieConsent"
         expires={150}
+        declineButtonClasses="DeclineButton"
+        buttonClasses='AcceptButton'
         enableDeclineButton="true"
-        declineButtonText="No, no utilizar cookies"
+        declineButtonText="Rechazar cookies"
       >
-        Poner aquí el mensaje sobre el uso de cookies
+        Este sitio utiliza cookies para brindar una mejor experiencia de usuario
         <a href="#">Política de Cookies</a>.
       </CookieConsent>
     </>
