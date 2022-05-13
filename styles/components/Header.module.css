@@ -1,0 +1,26 @@
+.HeaderContainer {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../public/images/image2.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.HeaderText {
+  margin-top: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.HeaderText h1 {
+  font-size: 60px;
+  color: #fff;
+}
+.HeaderText .HedTxt {
+  font-size: 28px;
+  color: #fff;
+  max-width: 60%;
+}

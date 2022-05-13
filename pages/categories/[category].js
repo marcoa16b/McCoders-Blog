@@ -6,6 +6,7 @@ import matter from 'gray-matter';
 import CategoriesList from '@utils/categories';
 import Link from 'next/link';
 import Navbar from '@components/Navbar';
+import Header from '@components/Header';
 import Footer from '@components/Footer';
 
 import styles from '@styles/Home.module.css';
@@ -72,19 +73,17 @@ const CategoryPost = ({ articles }) => {
         <meta name="description" content="Categorías del blog mccoders" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={styles.HeaderContainer}>
+      {/* <header className={styles.HeaderContainer}>
         <Navbar />
         <div className={styles.HeaderText}>
           <h1>McCoders Blog</h1>
           <p className={styles.HedTxt}>Este es un blog enfocado en tecnología.</p>
-          {/* <p className={styles.Button}>Button</p> */}
-          {/* <div className={styles.Button}>
-            <Link href="#">
-              <a>Button</a>
-            </Link>
-          </div> */}
         </div>
-      </header>
+      </header> */}
+      <Header 
+        title={'MarsElit Blog'} 
+        text={'Hola, mi nombre es Marco, bienvenido o bienvenida seas a mi blog personal donde encontraras información sobre tecnología.'} 
+      />
       <main>
         <div className={styles.PostsContainer}>
           {

@@ -18,7 +18,7 @@ const SocialButtons = () => {
           icon={<FaGithub />} 
         />
         <ButtonSocial 
-          link='https://twitter.com/marcofer16' 
+          link='https://twitter.com/mars_elit' 
           icon={<FaTwitter />} 
           color={"red"}
         />

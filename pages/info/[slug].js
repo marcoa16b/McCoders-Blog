@@ -1,24 +1,19 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
+import Markdown from '@components/Markdown';
 import fs from 'fs';
 import matter from 'gray-matter';
+import Image from 'next/image';
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
-import Markdown from '@components/Markdown';
-import ShareButtons from '@components/ShareButtons';
-import { FaFacebookF, FaTwitter, FaWhatsapp } from "react-icons/fa";
+
 import styles from '@styles/article.module.css';
 
-const Article = ({ article }) => {
-
+const CookiePolicies = ({ article }) => {
   const [loading, setLoading] = React.useState(true);
-  // const [scroll, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     setLoading(false);
-  }, [])
+  }, []);
 
   return (
     loading 
@@ -26,34 +21,22 @@ const Article = ({ article }) => {
     <div>LOADING...</div>
     :
     <div className={styles.article}>
-      <Head>
-        <title>{article.meta.title}</title>
-        <meta name="description" content={article.meta.description} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Navbar />
-      <header className={styles.thumbnail}>
-              
-        {/* <img alt='header image' src={article.meta.thumbnail} /> */}
+      <header className={styles.thumbnail_consent}>
         <Image 
           alt='header image'
-          src={article.meta.thumbnail}
-          // width={800}
-          // height={600}
+          src='https://i.imgur.com/uUYYUgu.jpg'
           layout='fill'
           priority={true}
         />
-
         <div className={styles.title}>
           <h1>{article.meta.title}</h1>
+          {/* <p>{article.meta.description}</p> */}
         </div>
       </header>
-
       <main className={styles.content}>
         <Markdown content={article.content} />
-        <ShareButtons article={article} />
       </main>
-
       <Footer />
     </div>
   );
@@ -63,7 +46,7 @@ export async function getStaticProps({ ...ctx }) {
   const { slug } = ctx.params;
 
   const content = fs
-      .readFileSync(`posts/${slug}.md`)
+      .readFileSync(`datamanage/${slug}.md`)
       .toString();
 
   const info = matter(content);
@@ -84,7 +67,7 @@ export async function getStaticProps({ ...ctx }) {
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync("posts");
+  const files = fs.readdirSync("datamanage");
   const paths = files.map(file => ({
       params: {
           slug: file.split('.')[0]
@@ -97,5 +80,4 @@ export async function getStaticPaths() {
   }
 }
 
-
-export default Article;
+export default CookiePolicies;

@@ -4,6 +4,7 @@ import '../styles/cookies.css'
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import CookieConsent from "react-cookie-consent";
+import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -33,8 +34,10 @@ function MyApp({ Component, pageProps }) {
         enableDeclineButton="true"
         declineButtonText="Rechazar cookies"
       >
-        Este sitio utiliza cookies para brindar una mejor experiencia de usuario
-        <a href="#">Política de Cookies</a>.
+        Este sitio utiliza cookies para brindar una mejor experiencia de usuario.
+        <Link href="/info/cookies-info">
+          <a target="_blank">Política de Cookies</a>
+        </Link>
       </CookieConsent>
     </>
     

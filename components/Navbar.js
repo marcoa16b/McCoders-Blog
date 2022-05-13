@@ -66,7 +66,7 @@ const Navbar = () => {
     :
     <div className={styles.Navbar}>
       <div className={styles.NavIcon}>
-        <h2>McCoders</h2>
+        <h2>MarsElit</h2>
       </div>
       <nav className={styles.NavLinks}>
         <Link href='/'>
